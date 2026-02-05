@@ -5,7 +5,9 @@ let isMenuOpen = false;
 document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     initMobileMenu();
+    initFormHandling();
     initScrollIndicator();
+    console.log('Raj Shamani Website Loaded Successfully!');
 });
 
 function initNavigation() {
@@ -78,6 +80,33 @@ function initMobileMenu() {
     function toggleMobileMenu() {
         isMenuOpen = !isMenuOpen;
         navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
+    }
+}
+
+function initFormHandling() {
+    const contactForm = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton = e.target.querySelector('.cta-button');
+            const originalText = submitButton.querySelector('span').textContent;
+            
+            submitButton.querySelector('span').textContent = 'SENDING...';
+            submitButton.disabled = true;
+            
+            setTimeout(() => {
+                submitButton.querySelector('span').textContent = 'MESSAGE SENT!';
+                
+                setTimeout(() => {
+                    e.target.reset();
+                    submitButton.querySelector('span').textContent = originalText;
+                    submitButton.disabled = false;
+                }, 2000);
+            }, 1500);
+        });
     }
 }
 
@@ -86,7 +115,7 @@ function initScrollIndicator() {
     
     if (scrollIndicator) {
         scrollIndicator.addEventListener('click', () => {
-            document.querySelector('#about').scrollIntoView({
+            document.querySelector('.proof-section').scrollIntoView({
                 behavior: 'smooth'
             });
         });
@@ -97,4 +126,8 @@ function initScrollIndicator() {
             scrollIndicator.style.opacity = opacity;
         });
     }
+}
+
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.body.classList.add('reduced-motion');
 }

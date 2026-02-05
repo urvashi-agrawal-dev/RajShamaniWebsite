@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Shamani - Entrepreneur. Podcaster. Author.</title>
+    <meta name="description" content="Raj Shamani helps people figure out money, business, health, relationships, and life by asking better questions.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="cinematic-css/main.css">
+</head>
+<body>
+    <!-- Advanced Loading Screen -->
+    <div class="loader">
+        <div class="loader-bg">
+            <div class="loader-particles"></div>
+            <div class="loader-grid"></div>
+        </div>
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="logo-char">R</span>
+                <span class="logo-char">A</span>
+                <span class="logo-char">J</span>
+                <span class="logo-space"></span>
+                <span class="logo-char">S</span>
+                <span class="logo-char">H</span>
+                <span class="logo-char">A</span>
+                <span class="logo-char">M</span>
+                <span class="logo-char">A</span>
+                <span class="logo-char">N</span>
+                <span class="logo-char">I</span>
+            </div>
+            <div class="loader-subtitle">ENTREPRENEUR • PODCASTER • AUTHOR</div>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+                <div class="loader-percentage">0%</div>
+            </div>
+            <div class="loader-skeleton">
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+                <div class="skeleton-line medium"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition">
+        <div class="transition-layer"></div>
+        <div class="transition-text">LOADING</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">RAJ SHAMANI</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-text="HOME">HOME</a>
+                <a href="#podcast" class="nav-link" data-text="PODCAST">PODCAST</a>
+                <a href="#about" class="nav-link" data-text="ABOUT">ABOUT</a>
+                <a href="#achievements" class="nav-link" data-text="ACHIEVEMENTS">ACHIEVEMENTS</a>
+                <a href="#book" class="nav-link" data-text="BOOK">BOOK</a>
+                <a href="#speaking" class="nav-link" data-text="SPEAKING">SPEAKING</a>
+                <a href="#contact" class="nav-link" data-text="CONTACT">CONTACT</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Animated Background Elements -->
+        <div class="hero-bg-animation">
+            <div class="floating-elements">
+                <div class="float-element" data-speed="0.5"></div>
+                <div class="float-element" data-speed="0.8"></div>
+                <div class="float-element" data-speed="0.3"></div>
+                <div class="float-element" data-speed="0.6"></div>
+            </div>
+            <div class="grid-overlay"></div>
+        </div>
+        
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="hero-image-placeholder">
+                <!-- Real background image -->
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop&crop=face" alt="Raj Shamani" class="hero-bg-image">
+                <div class="bg-gradient"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line expressive-text" data-text="RAJ">
+                        <span class="char">R</span>
+                        <span class="char">A</span>
+                        <span class="char">J</span>
+                    </span>
+                    <span class="title-line expressive-text" data-text="SHAMANI">
+                        <span class="char">S</span>
+                        <span class="char">H</span>
+                        <span class="char">A</span>
+                        <span class="char">M</span>
+                        <span class="char">A</span>
+                        <span class="char">N</span>
+                        <span class="char">I</span>
+                    </span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="subtitle-line">ENTREPRENEUR.</span>
+                    <span class="subtitle-line">PODCASTER.</span>
+                    <span class="subtitle-line">AUTHOR.</span>
+                </div>
+                <p class="hero-description">
+                    From the United Nations stage to intimate conversations with global leaders, I help people navigate 
+                    the complexities of money, business, health, relationships, and life—by asking the questions that matter most.
+                </p>
+                <div class="hero-cta">
+                    <button class="cta-btn primary" data-text="WATCH THE PODCAST">
+                        <span>WATCH THE PODCAST</span>
+                    </button>
+                    <button class="cta-btn secondary" data-text="INVITE TO SPEAK">
+                        <span>INVITE TO SPEAK</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">SCROLL</span>
+        </div>
+    </section>
+
+    <!-- Podcast Section -->
+    <section class="podcast-section" id="podcast">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">FIGURING OUT</h2>
+                <div class="section-subtitle">WITH RAJ SHAMANI</div>
+            </div>
+            
+            <div class="podcast-content">
+                <div class="podcast-description">
+                    <p class="large-text">
+                        Long-form conversations with leaders across business, sports, entertainment, and culture. 
+                        Because the best insights come from asking the right questions.
+                    </p>
+                    <button class="explore-btn" data-text="EXPLORE EPISODES">
+                        <span>EXPLORE EPISODES</span>
+                    </button>
+                </div>
+                
+                <div class="featured-episode">
+                    <div class="episode-badge">FEATURED</div>
+                    <div class="episode-image-placeholder">
+                        <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Vijay Mallya Episode" class="episode-bg-image">
+                        <div class="episode-overlay">
+                            <div class="play-button">
+                                <div class="play-icon">▶</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="episode-info">
+                        <h3 class="episode-guest">VIJAY MALLYA</h3>
+                        <p class="episode-title">The Rise and Fall of India's King of Good Times</p>
+                        <div class="episode-stats">
+                            <span class="stat">4.3 HOURS</span>
+                            <span class="stat">20M VIEWS</span>
+                            <span class="stat">4 DAYS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Most Viewed Podcasts Showcase -->
+            <div class="most-viewed-section">
+                <h3 class="most-viewed-title">MOST VIEWED CONVERSATIONS</h3>
+                <div class="most-viewed-carousel">
+                    <div class="carousel-track" id="carousel-track">
+                        <div class="podcast-highlight">
+                            <div class="highlight-rank">#1</div>
+                            <div class="highlight-image">
+                                <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Vijay Mallya">
+                            </div>
+                            <div class="highlight-info">
+                                <h4>VIJAY MALLYA</h4>
+                                <p>20M+ Views</p>
+                                <span class="highlight-topic">Business Empire & Downfall</span>
+                            </div>
+                        </div>
+                        
+                        <div class="podcast-highlight">
+                            <div class="highlight-rank">#2</div>
+                            <div class="highlight-image">
+                                <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Saurabh Mukherjea">
+                            </div>
+                            <div class="highlight-info">
+                                <h4>SAURABH MUKHERJEA</h4>
+                                <p>15M+ Views</p>
+                                <span class="highlight-topic">Investment Strategies</span>
+                            </div>
+                        </div>
+                        
+                        <div class="podcast-highlight">
+                            <div class="highlight-rank">#3</div>
+                            <div class="highlight-image">
+                                <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Deepinder Goyal">
+                            </div>
+                            <div class="highlight-info">
+                                <h4>DEEPINDER GOYAL</h4>
+                                <p>12M+ Views</p>
+                                <span class="highlight-topic">Zomato Journey</span>
+                            </div>
+                        </div>
+                        
+                        <div class="podcast-highlight">
+                            <div class="highlight-rank">#4</div>
+                            <div class="highlight-image">
+                                <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Harsh Pamnani">
+                            </div>
+                            <div class="highlight-info">
+                                <h4>HARSH PAMNANI</h4>
+                                <p>10M+ Views</p>
+                                <span class="highlight-topic">Entrepreneurship</span>
+                            </div>
+                        </div>
+                        
+                        <div class="podcast-highlight">
+                            <div class="highlight-rank">#5</div>
+                            <div class="highlight-image">
+                                <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Sunita Williams">
+                            </div>
+                            <div class="highlight-info">
+                                <h4>SUNITA WILLIAMS</h4>
+                                <p>8M+ Views</p>
+                                <span class="highlight-topic">Space Exploration</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" id="prev-btn">‹</button>
+                        <button class="carousel-btn next" id="next-btn">›</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="episodes-grid">
+                <div class="episode-card">
+                    <div class="episode-image">
+                        <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Saurabh Mukherjea Episode" class="episode-bg-image">
+                        <div class="episode-hover-overlay">
+                            <div class="episode-play">▶</div>
+                        </div>
+                    </div>
+                    <div class="episode-details">
+                        <h4 class="guest-name">SAURABH MUKHERJEA</h4>
+                        <p class="episode-desc">Investment Strategies and Market Insights</p>
+                        <div class="episode-buttons">
+                            <span class="platform-btn youtube">YOUTUBE</span>
+                            <span class="platform-btn spotify">SPOTIFY</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="episode-card">
+                    <div class="episode-image">
+                        <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Harsh Pamnani Episode" class="episode-bg-image">
+                        <div class="episode-hover-overlay">
+                            <div class="episode-play">▶</div>
+                        </div>
+                    </div>
+                    <div class="episode-details">
+                        <h4 class="guest-name">HARSH PAMNANI</h4>
+                        <p class="episode-desc">Entrepreneurship and Business Strategy</p>
+                        <div class="episode-buttons">
+                            <span class="platform-btn youtube">YOUTUBE</span>
+                            <span class="platform-btn spotify">SPOTIFY</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="episode-card">
+                    <div class="episode-image">
+                        <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Deepinder Goyal Episode" class="episode-bg-image">
+                        <div class="episode-hover-overlay">
+                            <div class="episode-play">▶</div>
+                        </div>
+                    </div>
+                    <div class="episode-details">
+                        <h4 class="guest-name">DEEPINDER GOYAL</h4>
+                        <p class="episode-desc">Building Zomato and Food Tech Revolution</p>
+                        <div class="episode-buttons">
+                            <span class="platform-btn youtube">YOUTUBE</span>
+                            <span class="platform-btn spotify">SPOTIFY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <div class="image-placeholder">
+                    <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Raj Shamani Portrait" class="about-bg-image">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">THE STORY</h2>
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        Born in Indore, Madhya Pradesh, I've always been the person who asks "why" when everyone else accepts "what." 
+                        This curiosity led me from being the youngest Indian speaker at the United Nations Youth Assembly to building 
+                        businesses and eventually creating conversations that matter.
+                    </p>
+                    <p class="about-paragraph">
+                        My journey isn't just about entrepreneurship or podcasting—it's about understanding human potential. 
+                        Every conversation, every question, every moment of curiosity has been building toward one goal: 
+                        helping people figure out the complexities of modern life.
+                    </p>
+                    <p class="about-paragraph">
+                        From addressing world leaders to sitting across from Vijay Mallya for 4.3 hours, from writing bestselling 
+                        books to introducing concepts like "Emotional ROI," the thread that connects everything is simple: 
+                        the right questions change everything.
+                    </p>
+                    <div class="philosophy-quote">
+                        <blockquote>
+                            "Some people meditate for peace. I ask questions."
+                        </blockquote>
+                    </div>
+                    <p class="about-paragraph">
+                        Today, through "Figuring Out with Raj Shamani," I get to explore the minds behind success, failure, 
+                        innovation, and human resilience. Because at the end of the day, we're all just figuring it out—
+                        one conversation at a time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section" id="achievements">
+        <div class="section-container">
+            <h2 class="section-title">RECOGNITION</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">MILLION+ VIEWS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">EPISODES</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-label">COUNTRIES</div>
+                </div>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <div class="achievement-icon">🇺🇳</div>
+                    <h3 class="achievement-title">YOUNGEST INDIAN UN SPEAKER</h3>
+                    <p class="achievement-desc">United Nations Youth Assembly</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">📚</div>
+                    <h3 class="achievement-title">BESTSELLING AUTHOR</h3>
+                    <p class="achievement-desc">Build, Don't Talk - Penguin Random House</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">🏛️</div>
+                    <h3 class="achievement-title">NATIONAL CREATORS AWARD</h3>
+                    <p class="achievement-desc">Addressed Prime Minister of India</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">💡</div>
+                    <h3 class="achievement-title">EMOTIONAL ROI CONCEPT</h3>
+                    <p class="achievement-desc">Sharjah Investment Forum</p>
+                </div>
+            </div>
+            
+            <div class="media-logos">
+                <div class="logo-item">
+                    <img src="images/forbes-logo.png" alt="Forbes" class="media-logo-img">
+                    FORBES
+                </div>
+                <div class="logo-item">ECONOMIC TIMES</div>
+                <div class="logo-item">BUSINESS STANDARD</div>
+                <div class="logo-item">MINT</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Section -->
+    <section class="book-section" id="book">
+        <div class="book-container">
+            <div class="book-visual">
+                <div class="book-cover">
+                    <div class="book-spine"></div>
+                    <div class="book-front">
+                        <img src="https://m.media-amazon.com/images/I/71jZHZ8HPUL._AC_UF1000,1000_QL80_.jpg" alt="Build Don't Talk Book Cover" class="book-cover-img">
+                    </div>
+                </div>
+            </div>
+            <div class="book-content">
+                <h2 class="section-title">BUILD, DON'T TALK</h2>
+                <p class="book-description">
+                    Execution over noise. Discipline over motivation. 
+                    A bestselling guide to turning ideas into reality.
+                </p>
+                <button class="book-cta" data-text="BUY THE BOOK">
+                    <span>BUY THE BOOK</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speaking Section -->
+    <section class="speaking-section" id="speaking">
+        <div class="section-container">
+            <h2 class="section-title">SPEAKING</h2>
+            <div class="speaking-content">
+                <div class="topics-list">
+                    <div class="topic-item">ENTREPRENEURSHIP & INNOVATION</div>
+                    <div class="topic-item">CREATOR ECONOMY</div>
+                    <div class="topic-item">EMOTIONAL ROI</div>
+                    <div class="topic-item">THE ART OF ASKING QUESTIONS</div>
+                </div>
+                <button class="speaking-cta" data-text="INVITE RAJ TO SPEAK">
+                    <span>INVITE RAJ TO SPEAK</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">CONNECT</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="NAME" required>
+                        <input type="email" placeholder="EMAIL" required>
+                    </div>
+                    <input type="text" placeholder="SUBJECT" required>
+                    <textarea placeholder="MESSAGE" rows="6" required></textarea>
+                    <button type="submit" class="form-submit" data-text="SEND MESSAGE">
+                        <span>SEND MESSAGE</span>
+                    </button>
+                </form>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link" data-platform="youtube">YOUTUBE</a>
+                    <a href="#" class="social-link" data-platform="instagram">INSTAGRAM</a>
+                    <a href="#" class="social-link" data-platform="twitter">TWITTER</a>
+                    <a href="#" class="social-link" data-platform="linkedin">LINKEDIN</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2026 RAJ SHAMANI. ALL RIGHTS RESERVED.</p>
+            <p class="footer-disclaimer">
+                Concept website created for educational and portfolio purposes. Not officially affiliated.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="cinematic-js/animations.js"></script>
+    <script src="cinematic-js/main.js"></script>
+</body>
+</html>

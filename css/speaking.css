@@ -1,0 +1,438 @@
+/* Speaking Page Specific Styles */
+
+.speaking-hero {
+    padding: 12rem 0 8rem;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    text-align: center;
+    position: relative;
+}
+
+.speaking-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 40% 60%, rgba(255, 68, 68, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.speaking-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.speaking-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.speaking-subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    color: #cccccc;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+.speaking-cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Speaking Topics */
+.speaking-topics {
+    padding: 8rem 0;
+    background: #0a0a0a;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.topic-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 68, 68, 0.3);
+}
+
+.topic-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.topic-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.topic-description {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.topic-points {
+    list-style: none;
+    padding: 0;
+}
+
+.topic-points li {
+    font-size: 0.9rem;
+    color: #ff4444;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.topic-points li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #ff4444;
+    font-weight: bold;
+}
+
+/* Speaking Highlights */
+.speaking-highlights {
+    padding: 8rem 0;
+    background: #111111;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.highlight-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 68, 68, 0.3);
+}
+
+.highlight-venue {
+    font-size: 1rem;
+    color: #ff4444;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.highlight-description {
+    font-size: 0.95rem;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.highlight-year {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 68, 68, 0.2);
+    color: #ff4444;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Brand Collaborations */
+.brand-collaborations {
+    padding: 8rem 0;
+    background: #0a0a0a;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.brand-placeholder {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    color: #666666;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+.brand-placeholder:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 68, 68, 0.3);
+    color: #cccccc;
+}
+
+.brand-cta {
+    margin-top: 3rem;
+}
+
+/* What to Expect */
+.what-to-expect {
+    padding: 8rem 0;
+    background: #111111;
+}
+
+.expect-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.expect-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.expect-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 68, 68, 0.3);
+}
+
+.expect-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.expect-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.expect-description {
+    font-size: 0.95rem;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Booking CTA */
+.booking-cta {
+    padding: 6rem 0;
+    background: #0a0a0a;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    color: #cccccc;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Active navigation link */
+.nav-link.active {
+    color: #ff4444;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .speaking-hero {
+        padding: 10rem 0 6rem;
+    }
+
+    .speaking-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .speaking-topics {
+        padding: 6rem 0;
+    }
+
+    .topics-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .topic-card {
+        padding: 2rem;
+    }
+
+    .speaking-highlights {
+        padding: 6rem 0;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .highlight-card {
+        padding: 2rem;
+    }
+
+    .brand-collaborations {
+        padding: 6rem 0;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .what-to-expect {
+        padding: 6rem 0;
+    }
+
+    .expect-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .expect-card {
+        padding: 1.5rem;
+    }
+
+    .booking-cta {
+        padding: 4rem 0;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .speaking-hero {
+        padding: 8rem 0 4rem;
+    }
+
+    .speaking-topics {
+        padding: 4rem 0;
+    }
+
+    .topic-card {
+        padding: 1.5rem;
+    }
+
+    .speaking-highlights {
+        padding: 4rem 0;
+    }
+
+    .highlight-card {
+        padding: 1.5rem;
+    }
+
+    .highlight-year {
+        position: static;
+        display: inline-block;
+        margin-top: 1rem;
+    }
+
+    .brand-collaborations {
+        padding: 4rem 0;
+    }
+
+    .brands-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-placeholder {
+        padding: 2rem;
+        min-height: 80px;
+    }
+
+    .what-to-expect {
+        padding: 4rem 0;
+    }
+
+    .expect-grid {
+        grid-template-columns: 1fr;
+    }
+}

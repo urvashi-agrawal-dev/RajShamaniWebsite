@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Raj Shamani</title>
+    <meta name="description" content="Get in touch with Raj Shamani for speaking engagements, podcast collaborations, or business inquiries.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Raj Shamani</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="podcast.html" class="nav-link">Podcast</a>
+                <a href="achievements.html" class="nav-link">Achievements</a>
+                <a href="book.html" class="nav-link">Book</a>
+                <a href="speaking.html" class="nav-link">Speaking</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1 class="contact-title">Let's Start a Conversation</h1>
+                <p class="contact-subtitle">
+                    Whether it's a speaking engagement, podcast collaboration, or business inquiry, 
+                    I'm always interested in meaningful conversations that create value.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2 class="form-title">Send a Message</h2>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inquiry-type">Inquiry Type</label>
+                            <select id="inquiry-type" name="inquiry-type" required>
+                                <option value="">Select an option</option>
+                                <option value="speaking">Speaking Engagement</option>
+                                <option value="podcast">Podcast Collaboration</option>
+                                <option value="brand">Brand Partnership</option>
+                                <option value="media">Media Interview</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell me more about your inquiry, event details, timeline, and how we can create value together..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-section">
+                    <h2 class="info-title">Get in Touch</h2>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">📧</div>
+                            <div class="method-content">
+                                <h3 class="method-title">Email</h3>
+                                <p class="method-text">hello@rajshamani.com</p>
+                                <p class="method-note">For all business inquiries</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">🎙️</div>
+                            <div class="method-content">
+                                <h3 class="method-title">Podcast Guests</h3>
+                                <p class="method-text">podcast@rajshamani.com</p>
+                                <p class="method-note">For podcast collaboration requests</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">🎤</div>
+                            <div class="method-content">
+                                <h3 class="method-title">Speaking Engagements</h3>
+                                <p class="method-text">speaking@rajshamani.com</p>
+                                <p class="method-note">For event bookings and speaking requests</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="response-time">
+                        <h3 class="response-title">Response Time</h3>
+                        <p class="response-text">
+                            I personally review all messages and aim to respond within 48 hours. 
+                            For urgent matters, please mention it in your message subject.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Inquiries -->
+    <section class="business-inquiries">
+        <div class="container">
+            <h2 class="section-title">Business Inquiries</h2>
+            <div class="inquiries-grid">
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">🎤</div>
+                    <h3 class="inquiry-title">Speaking Engagements</h3>
+                    <p class="inquiry-description">
+                        Corporate events, conferences, workshops, and educational institutions. 
+                        Custom presentations tailored to your audience and objectives.
+                    </p>
+                    <ul class="inquiry-details">
+                        <li>Keynote presentations</li>
+                        <li>Panel discussions</li>
+                        <li>Workshop facilitation</li>
+                        <li>Fireside chats</li>
+                    </ul>
+                </div>
+
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">🎙️</div>
+                    <h3 class="inquiry-title">Podcast Collaborations</h3>
+                    <p class="inquiry-description">
+                        Guest appearances on podcasts, joint episodes, and content collaborations. 
+                        Let's create conversations that add value to both our audiences.
+                    </p>
+                    <ul class="inquiry-details">
+                        <li>Guest interviews</li>
+                        <li>Joint episodes</li>
+                        <li>Content series</li>
+                        <li>Cross-promotion</li>
+                    </ul>
+                </div>
+
+                <div class="inquiry-card">
+                    <div class="inquiry-icon">🤝</div>
+                    <h3 class="inquiry-title">Brand Partnerships</h3>
+                    <p class="inquiry-description">
+                        Strategic partnerships with brands that align with values of authenticity, 
+                        growth, and meaningful impact. Quality over quantity, always.
+                    </p>
+                    <ul class="inquiry-details">
+                        <li>Brand collaborations</li>
+                        <li>Content partnerships</li>
+                        <li>Product endorsements</li>
+                        <li>Advisory roles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="social-media">
+        <div class="container">
+            <h2 class="section-title">Connect on Social Media</h2>
+            <p class="social-subtitle">
+                Follow the journey, join the conversations, and stay updated with the latest episodes and insights.
+            </p>
+            <div class="social-links">
+                <a href="#" class="social-card youtube">
+                    <div class="social-icon">📺</div>
+                    <div class="social-content">
+                        <h3 class="social-platform">YouTube</h3>
+                        <p class="social-handle">@RajShamani</p>
+                        <p class="social-description">Full podcast episodes and highlights</p>
+                    </div>
+                </a>
+
+                <a href="#" class="social-card instagram">
+                    <div class="social-icon">📸</div>
+                    <div class="social-content">
+                        <h3 class="social-platform">Instagram</h3>
+                        <p class="social-handle">@rajshamani</p>
+                        <p class="social-description">Behind the scenes and daily insights</p>
+                    </div>
+                </a>
+
+                <a href="#" class="social-card twitter">
+                    <div class="social-icon">🐦</div>
+                    <div class="social-content">
+                        <h3 class="social-platform">Twitter</h3>
+                        <p class="social-handle">@rajshamani</p>
+                        <p class="social-description">Quick thoughts and conversations</p>
+                    </div>
+                </a>
+
+                <a href="#" class="social-card linkedin">
+                    <div class="social-icon">💼</div>
+                    <div class="social-content">
+                        <h3 class="social-platform">LinkedIn</h3>
+                        <p class="social-handle">Raj Shamani</p>
+                        <p class="social-description">Professional updates and articles</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2026 Raj Shamani. All rights reserved.</p>
+                    <p class="disclaimer">Concept website created for educational and portfolio purposes. Not officially affiliated.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">YouTube</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
