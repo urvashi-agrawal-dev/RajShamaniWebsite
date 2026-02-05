@@ -1,0 +1,16 @@
+Image Placeholders for Raj Shamani Website
+==========================================
+
+The following images should be placed in this directory:
+
+1. raj-shamani-portrait.jpg - Hero section background image
+2. vijay-mallya-episode.jpg - Featured episode thumbnail  
+3. bill-gates-episode.jpg - Bill Gates episode thumbnail
+4. sunita-williams-episode.jpg - Sunita Williams episode thumbnail
+5. harsh-pamnani-episode.jpg - Harsh Pamnani episode thumbnail
+6. raj-shamani-about.jpg - About section portrait
+7. build-dont-talk-book.jpg - Book cover image
+8. forbes-logo.png - Forbes logo for media section
+
+These correspond to the actual images provided by the user.
+The website will display placeholder gradients until real images are added.

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Shamani - Podcaster. Entrepreneur. Author.</title>
+    <meta name="description" content="Figuring out how to grow every day — so India can live and love better.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">RAJ SHAMANI</div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">HOME</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#podcast" class="nav-link">PODCAST</a>
+                <a href="#impact" class="nav-link">IMPACT</a>
+                <a href="#book" class="nav-link">BOOK</a>
+                <a href="#media" class="nav-link">MEDIA & RECOGNITION</a>
+                <a href="#collaborations" class="nav-link">COLLABORATIONS</a>
+                <a href="#connect" class="nav-link">CONNECT</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="images/soloingraj.png" alt="Raj Shamani" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">RAJ SHAMANI</h1>
+            <p class="hero-subtitle">Podcaster. Entrepreneur. Author.</p>
+            <p class="hero-tagline">
+                Figuring out how to grow every day — so India can live and love better.
+            </p>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <!-- Authority Section -->
+    <section class="authority-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="yellow-line"></div>
+                <h2 class="section-title">CONVERSATIONS WITH GLOBAL ICONS</h2>
+                <p class="section-subtitle">
+                    From tech pioneers to Olympic champions — every conversation uncovers insights that shape the future.
+                </p>
+            </div>
+            
+            <div class="authority-grid">
+                <div class="authority-card featured">
+                    <div class="card-image">
+                        <img src="images/rajwbill.png" alt="Bill Gates Episode">
+                        <div class="card-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="guest-name">BILL GATES</h3>
+                        <p class="episode-label">Figuring Out</p>
+                        <div class="badge global">GLOBAL ICON</div>
+                    </div>
+                </div>
+                
+                <div class="authority-card featured">
+                    <div class="card-image">
+                        <img src="images/rajvij.jpeg" alt="Vijay Mallya Episode">
+                        <div class="card-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="guest-name">VIJAY MALLYA</h3>
+                        <p class="episode-label">Most Viewed Episode</p>
+                        <div class="badge most-viewed">MOST VIEWED</div>
+                        <div class="stats">
+                            <span>4.3 HOURS</span>
+                            <span>20M+ VIEWS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="authority-card">
+                    <div class="card-image">
+                        <img src="images/rajwmich.jpg" alt="Michael Phelps Episode">
+                        <div class="card-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="guest-name">MICHAEL PHELPS</h3>
+                        <p class="episode-label">Episode 458</p>
+                        <div class="badge">OLYMPIC LEGEND</div>
+                    </div>
+                </div>
+                
+                <div class="authority-card">
+                    <div class="card-image">
+                        <img src="images/rajwsuni.jpg" alt="Sunita Williams Episode">
+                        <div class="card-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="guest-name">SUNITA WILLIAMS</h3>
+                        <p class="episode-label">Episode 461</p>
+                        <div class="badge">SPACE PIONEER</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Section -->
+    <section class="podcast-section" id="podcast">
+        <div class="section-container">
+            <div class="podcast-header">
+                <div class="yellow-line"></div>
+                <h2 class="section-title">FIGURING OUT WITH RAJ SHAMANI</h2>
+                <p class="podcast-mission">
+                    The next decade is India's Golden Age.<br>
+                    This podcast exists to help Indians prepare, grow, and win their Indian Dream.
+                </p>
+            </div>
+            
+            <div class="podcast-grid">
+                <div class="podcast-card">
+                    <div class="podcast-image">
+                        <img src="images/rajpod3.jpg" alt="Deepinder Goyal">
+                        <div class="podcast-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                    </div>
+                    <h4 class="podcast-guest">DEEPINDER GOYAL</h4>
+                    <p class="podcast-title">Building Zomato</p>
+                </div>
+                
+                <div class="podcast-card">
+                    <div class="podcast-image">
+                        <img src="images/rajpod2.jpg" alt="Saurabh Mukherjea">
+                        <div class="podcast-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                    </div>
+                    <h4 class="podcast-guest">SAURABH MUKHERJEA</h4>
+                    <p class="podcast-title">Wealth Creation</p>
+                </div>
+                
+                <div class="podcast-card">
+                    <div class="podcast-image">
+                        <img src="images/rajpod1.jpg" alt="Harsh Pamnani">
+                        <div class="podcast-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                    </div>
+                    <h4 class="podcast-guest">HARSH PAMNANI</h4>
+                    <p class="podcast-title">Entrepreneurship</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section" id="impact">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="yellow-line"></div>
+                <h2 class="section-title">IMPACT & REACH</h2>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="14.7">0</div>
+                    <div class="stat-unit">M+</div>
+                    <div class="stat-label">YOUTUBE SUBSCRIBERS</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number" data-target="2290">0</div>
+                    <div class="stat-unit">+</div>
+                    <div class="stat-label">VIDEOS</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number" data-target="1.7">0</div>
+                    <div class="stat-unit">B+</div>
+                    <div class="stat-label">TOTAL VIEWS</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number" data-target="2009">0</div>
+                    <div class="stat-unit"></div>
+                    <div class="stat-label">CHANNEL STARTED</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section" id="about">
+        <div class="story-container">
+            <div class="story-image">
+                <img src="images/rajcov.jpg" alt="Raj Shamani Story">
+                <div class="image-frame"></div>
+            </div>
+            
+            <div class="story-content">
+                <div class="yellow-line"></div>
+                <h2 class="section-title">THE JOURNEY</h2>
+                
+                <div class="story-text">
+                    <p>
+                        From selling dishwashing liquid door-to-door in Indore to hosting the most 
+                        influential conversations in India, Raj Shamani's journey is built on grit, 
+                        curiosity, and relentless execution.
+                    </p>
+                    
+                    <div class="story-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">📍</span>
+                            <span>Born: 29 July 1997, Indore</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">💼</span>
+                            <span>Joined family business at 16</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">📈</span>
+                            <span>Grew Shamani Industries 20×</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🇺🇳</span>
+                            <span>Youngest Indian speaker at UN Youth Assembly</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🎤</span>
+                            <span>4× TEDx speaker</span>
+                        </div>
+                    </div>
+                    
+                    <div class="quote-highlight">
+                        <div class="quote-mark">"</div>
+                        <blockquote>Some people meditate for peace. I ask questions.</blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Section -->
+    <section class="book-section" id="book">
+        <div class="book-container">
+            <div class="book-visual">
+                <img src="images/buildbook.png" alt="Build Don't Talk Book" class="book-cover">
+                <div class="book-glow"></div>
+            </div>
+            
+            <div class="book-content">
+                <div class="yellow-line"></div>
+                <h2 class="section-title">BUILD, DON'T TALK</h2>
+                
+                <p class="book-description">
+                    A bestselling guide to execution over noise, discipline over motivation. 
+                    This book has transformed how thousands approach entrepreneurship and life.
+                </p>
+                
+                <a href="https://www.amazon.in/Build-Dont-Talk-Things-Taught/dp/0143459686" 
+                   target="_blank" 
+                   class="cta-button">
+                    <span>GET THE BOOK</span>
+                    <div class="button-glow"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section class="media-section" id="media">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="yellow-line"></div>
+                <h2 class="section-title">MEDIA & RECOGNITION</h2>
+            </div>
+            
+            <div class="media-showcase">
+                <div class="media-image">
+                    <img src="images/raj fobes.webp" alt="Forbes Feature">
+                    <div class="forbes-badge">FORBES INDIA</div>
+                </div>
+                
+                <div class="media-content">
+                    <div class="recognition-list">
+                        <div class="recognition-item">
+                            <div class="recognition-icon">🏆</div>
+                            <div class="recognition-text">
+                                <h4>FORBES INDIA FEATURE</h4>
+                                <p>Recognized as influential entrepreneur</p>
+                            </div>
+                        </div>
+                        
+                        <div class="recognition-item">
+                            <div class="recognition-icon">🎖️</div>
+                            <div class="recognition-text">
+                                <h4>NATIONAL CREATORS AWARD</h4>
+                                <p>Honored by Prime Minister of India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="recognition-item">
+                            <div class="recognition-icon">🇺🇳</div>
+                            <div class="recognition-text">
+                                <h4>UN YOUTH DELEGATE</h4>
+                                <p>Youngest Indian speaker</p>
+                            </div>
+                        </div>
+                        
+                        <div class="recognition-item">
+                            <div class="recognition-icon">🏢</div>
+                            <div class="recognition-text">
+                                <h4>FOUNDER – HOUSE OF X</h4>
+                                <p>Creator economy platform</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborations Section -->
+    <section class="collab-section" id="collaborations">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="yellow-line"></div>
+                <h2 class="section-title">COLLABORATIONS & SPEAKING</h2>
+            </div>
+            
+            <div class="collab-grid">
+                <div class="collab-item">
+                    <div class="collab-icon">🎤</div>
+                    <h3>SPEAKING ENGAGEMENTS</h3>
+                    <p>Keynotes on entrepreneurship, creator economy, and personal branding</p>
+                </div>
+                
+                <div class="collab-item">
+                    <div class="collab-icon">🤝</div>
+                    <h3>BRAND COLLABORATIONS</h3>
+                    <p>Strategic partnerships with leading brands</p>
+                </div>
+                
+                <div class="collab-item">
+                    <div class="collab-icon">💰</div>
+                    <h3>ANGEL INVESTMENTS</h3>
+                    <p>Supporting innovative startups and founders</p>
+                </div>
+                
+                <div class="collab-item">
+                    <div class="collab-icon">🚀</div>
+                    <h3>CREATOR ECONOMY LEADERSHIP</h3>
+                    <p>Building the future of content and commerce</p>
+                </div>
+            </div>
+            
+            <div class="collab-cta">
+                <button class="cta-button">
+                    <span>INVITE RAJ TO SPEAK</span>
+                    <div class="button-glow"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section class="connect-section" id="connect">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="yellow-line"></div>
+                <h2 class="section-title">LET'S CONNECT</h2>
+            </div>
+            
+            <div class="social-grid">
+                <a href="#" class="social-card youtube">
+                    <div class="social-icon">▶</div>
+                    <div class="social-name">YOUTUBE</div>
+                    <div class="social-handle">@rajshamani</div>
+                </a>
+                
+                <a href="#" class="social-card instagram">
+                    <div class="social-icon">📷</div>
+                    <div class="social-name">INSTAGRAM</div>
+                    <div class="social-handle">@rajshamani</div>
+                </a>
+                
+                <a href="#" class="social-card twitter">
+                    <div class="social-icon">𝕏</div>
+                    <div class="social-name">TWITTER</div>
+                    <div class="social-handle">@rajshamani</div>
+                </a>
+                
+                <a href="#" class="social-card linkedin">
+                    <div class="social-icon">in</div>
+                    <div class="social-name">LINKEDIN</div>
+                    <div class="social-handle">Raj Shamani</div>
+                </a>
+                
+                <a href="#" class="social-card facebook">
+                    <div class="social-icon">f</div>
+                    <div class="social-name">FACEBOOK</div>
+                    <div class="social-handle">Raj Shamani</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2026 RAJ SHAMANI. ALL RIGHTS RESERVED.</p>
+            <p class="footer-disclaimer">
+                Concept website created for educational and portfolio purposes. Not officially affiliated.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
