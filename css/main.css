@@ -755,3 +755,102 @@ h1, h2, h3 {
         min-width: 280px;
     }
 }
+
+
+/* Impact Video Section */
+.impact-video-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.impact-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.impact-video.playing {
+    opacity: 1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+}
+
+.video-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    opacity: 0;
+    transition: opacity 1s ease 0.5s;
+}
+
+.video-text.visible {
+    opacity: 1;
+}
+
+.video-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--white);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+}
+
+/* Podcast Background */
+.podcast-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.podcast-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.podcast-brand-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(40px) brightness(0.3);
+    opacity: 0.3;
+}
+
+.podcast-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.9) 100%);
+}
+
+.podcast-section .section-container {
+    position: relative;
+    z-index: 1;
+}

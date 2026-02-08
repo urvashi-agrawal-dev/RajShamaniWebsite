@@ -149,3 +149,38 @@ function initCounters() {
         });
     });
 }
+
+
+// Video Section Animation
+function initVideoSection() {
+    const video = document.getElementById('impactVideo');
+    const videoText = document.querySelector('.video-text');
+    
+    if (!video) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.classList.add('playing');
+                video.play().catch(e => console.log('Video autoplay prevented:', e));
+                
+                setTimeout(() => {
+                    if (videoText) {
+                        videoText.classList.add('visible');
+                    }
+                }, 500);
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    
+    observer.observe(video);
+}
+
+// Initialize video section
+document.addEventListener('DOMContentLoaded', function() {
+    initVideoSection();
+});
