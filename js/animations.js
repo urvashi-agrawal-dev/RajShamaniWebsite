@@ -39,11 +39,14 @@ function initScrollAnimations() {
     gsap.utils.toArray('.section-title').forEach(title => {
         gsap.fromTo(title, {
             opacity: 0,
-            y: 50
+            y: 50,
+            scale: 0.9
         }, {
             opacity: 1,
             y: 0,
+            scale: 1,
             duration: 1,
+            ease: 'back.out(1.7)',
             scrollTrigger: {
                 trigger: title,
                 start: 'top 80%'
@@ -54,12 +57,15 @@ function initScrollAnimations() {
     gsap.utils.toArray('.podcast-card').forEach((card, i) => {
         gsap.fromTo(card, {
             opacity: 0,
-            y: 40
+            y: 60,
+            rotationY: -15
         }, {
             opacity: 1,
             y: 0,
-            duration: 0.6,
-            delay: i * 0.1,
+            rotationY: 0,
+            duration: 0.8,
+            delay: i * 0.15,
+            ease: 'power3.out',
             scrollTrigger: {
                 trigger: card,
                 start: 'top 85%'
@@ -70,14 +76,51 @@ function initScrollAnimations() {
     gsap.utils.toArray('.social-link').forEach((link, i) => {
         gsap.fromTo(link, {
             opacity: 0,
-            scale: 0.9
+            scale: 0,
+            rotation: -180
         }, {
             opacity: 1,
             scale: 1,
-            duration: 0.5,
+            rotation: 0,
+            duration: 0.6,
             delay: i * 0.1,
+            ease: 'back.out(1.7)',
             scrollTrigger: {
                 trigger: link,
+                start: 'top 85%'
+            }
+        });
+    });
+    
+    gsap.utils.toArray('.youtube-card').forEach((card, i) => {
+        gsap.fromTo(card, {
+            opacity: 0,
+            x: i === 0 ? -100 : 100,
+            rotationY: i === 0 ? -20 : 20
+        }, {
+            opacity: 1,
+            x: 0,
+            rotationY: 0,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 80%'
+            }
+        });
+    });
+    
+    gsap.utils.toArray('.recognition-item').forEach((item, i) => {
+        gsap.fromTo(item, {
+            opacity: 0,
+            y: 30
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            delay: i * 0.1,
+            scrollTrigger: {
+                trigger: item,
                 start: 'top 85%'
             }
         });
