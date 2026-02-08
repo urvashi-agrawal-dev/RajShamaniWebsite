@@ -133,7 +133,7 @@ h1, h2, h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
 }
 
 .hero-overlay {
@@ -234,8 +234,16 @@ h1, h2, h3 {
     align-items: center;
 }
 
+.about-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 8px;
+}
+
 .about-content {
-    padding-right: 2rem;
+    padding-left: 2rem;
 }
 
 .about-content .section-title {
@@ -284,13 +292,31 @@ h1, h2, h3 {
     background: #000;
 }
 
-.podcast-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.podcast-carousel {
+    display: flex;
     gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 2rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--yellow) #222;
+}
+
+.podcast-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.podcast-carousel::-webkit-scrollbar-track {
+    background: #222;
+}
+
+.podcast-carousel::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+    border-radius: 4px;
 }
 
 .podcast-card {
+    min-width: 320px;
     text-decoration: none;
     color: var(--white);
     cursor: pointer;
@@ -348,6 +374,12 @@ h1, h2, h3 {
     justify-content: center;
     font-size: 1.5rem;
     color: var(--yellow);
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 .badge {
@@ -365,6 +397,93 @@ h1, h2, h3 {
 .podcast-card h3 {
     font-size: 1.3rem;
     font-weight: 700;
+}
+
+/* Clip Strip */
+.clip-strip {
+    background: #0a0a0a;
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+.clip-scroll {
+    display: flex;
+    gap: 2rem;
+    animation: scroll 30s linear infinite;
+}
+
+.clip-scroll:hover {
+    animation-play-state: paused;
+}
+
+.clip-item {
+    min-width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.clip-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* YouTube Channels */
+.youtube-section {
+    background: #0a0a0a;
+}
+
+.youtube-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.youtube-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 212, 0, 0.2);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.youtube-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--yellow);
+    box-shadow: 0 20px 40px rgba(255, 212, 0, 0.2);
+}
+
+.youtube-icon {
+    font-size: 4rem;
+    color: var(--yellow);
+    margin-bottom: 1.5rem;
+}
+
+.youtube-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.youtube-purpose {
+    font-size: 1rem;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+.youtube-subs {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--yellow);
+    margin-bottom: 2rem;
 }
 
 /* Impact */
@@ -496,33 +615,32 @@ h1, h2, h3 {
 .social-grid {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
 .social-link {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    padding: 2rem;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+    border-radius: 50%;
     text-decoration: none;
     color: var(--white);
-    min-width: 150px;
     transition: all 0.3s;
 }
 
 .social-link:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     border-color: var(--yellow);
-    box-shadow: 0 10px 30px rgba(255, 212, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(255, 212, 0, 0.3);
 }
 
 .social-icon {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: var(--yellow);
 }
 
@@ -533,12 +651,14 @@ h1, h2, h3 {
     text-align: center;
     border-top: 1px solid rgba(255, 212, 0, 0.2);
     color: var(--gray);
+    font-size: 0.9rem;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
     .about-container,
-    .book-container {
+    .book-container,
+    .youtube-grid {
         grid-template-columns: 1fr;
         gap: 4rem;
     }
@@ -569,5 +689,13 @@ h1, h2, h3 {
     
     .about-image img {
         height: 400px;
+    }
+    
+    .podcast-carousel {
+        padding: 2rem 1rem;
+    }
+    
+    .podcast-card {
+        min-width: 280px;
     }
 }
