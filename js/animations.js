@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeroAnimations();
     initScrollAnimations();
     initCounters();
+    initVideoAutoplay();
+    initSocialAnimations();
 });
 
 function initHeroAnimations() {
@@ -14,120 +16,158 @@ function initHeroAnimations() {
     tl.to('.hero-title', {
         opacity: 1,
         y: 0,
-        duration: 1.2,
+        duration: 1,
         ease: 'power3.out'
     })
     .to('.hero-subtitle', {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.9,
         ease: 'power3.out'
     }, '-=0.6')
     .to('.hero-tagline', {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.8,
         ease: 'power3.out'
     }, '-=0.5')
-    .to('.scroll-indicator', {
+    .to('.hero-cta', {
         opacity: 1,
-        duration: 0.8
+        y: 0,
+        duration: 0.7,
+        ease: 'power3.out'
+    }, '-=0.4')
+    .to('.hero-cta-secondary', {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        ease: 'power3.out'
+    }, '-=0.6')
+    .to('.scroll-indicator', {
+        opacity: 0.7,
+        duration: 0.6
     }, '-=0.3');
+    
+    // Video title animation with delay
+    gsap.to('.video-content', {
+        opacity: 1,
+        duration: 1,
+        delay: 0.5,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.impact-video-section',
+            start: 'top 80%'
+        }
+    });
 }
 
 function initScrollAnimations() {
+    // Section titles
     gsap.utils.toArray('.section-title').forEach(title => {
         gsap.fromTo(title, {
             opacity: 0,
-            y: 50,
-            scale: 0.9
+            y: 40
         }, {
             opacity: 1,
             y: 0,
-            scale: 1,
-            duration: 1,
-            ease: 'back.out(1.7)',
+            duration: 0.9,
+            ease: 'power3.out',
             scrollTrigger: {
                 trigger: title,
-                start: 'top 80%'
-            }
-        });
-    });
-    
-    gsap.utils.toArray('.podcast-card').forEach((card, i) => {
-        gsap.fromTo(card, {
-            opacity: 0,
-            y: 60,
-            rotationY: -15
-        }, {
-            opacity: 1,
-            y: 0,
-            rotationY: 0,
-            duration: 0.8,
-            delay: i * 0.15,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: card,
                 start: 'top 85%'
             }
         });
     });
     
-    gsap.utils.toArray('.social-link').forEach((link, i) => {
-        gsap.fromTo(link, {
-            opacity: 0,
-            scale: 0,
-            rotation: -180
-        }, {
-            opacity: 1,
-            scale: 1,
-            rotation: 0,
-            duration: 0.6,
-            delay: i * 0.1,
-            ease: 'back.out(1.7)',
-            scrollTrigger: {
-                trigger: link,
-                start: 'top 85%'
-            }
-        });
-    });
-    
-    gsap.utils.toArray('.youtube-card').forEach((card, i) => {
-        gsap.fromTo(card, {
-            opacity: 0,
-            x: i === 0 ? -100 : 100,
-            rotationY: i === 0 ? -20 : 20
-        }, {
+    // Timeline items stagger
+    gsap.utils.toArray('.timeline-item').forEach((item, i) => {
+        gsap.to(item, {
             opacity: 1,
             x: 0,
-            rotationY: 0,
-            duration: 1,
+            duration: 0.8,
+            delay: i * 0.2,
             ease: 'power3.out',
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 80%'
-            }
-        });
-    });
-    
-    gsap.utils.toArray('.recognition-item').forEach((item, i) => {
-        gsap.fromTo(item, {
-            opacity: 0,
-            y: 30
-        }, {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            delay: i * 0.1,
             scrollTrigger: {
                 trigger: item,
                 start: 'top 85%'
             }
         });
     });
+    
+    // Quote block
+    gsap.to('.quote-block', {
+        opacity: 1,
+        x: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.quote-block',
+            start: 'top 85%'
+        }
+    });
+    
+    // Figuring Out logo
+    gsap.to('.figuring-out-logo', {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        ease: 'back.out(1.7)',
+        scrollTrigger: {
+            trigger: '.figuring-out-logo',
+            start: 'top 80%'
+        }
+    });
+    
+    // Podcast cards
+    gsap.utils.toArray('.podcast-card').forEach((card, i) => {
+        gsap.fromTo(card, {
+            opacity: 0,
+            y: 40
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            delay: i * 0.08,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 90%'
+            }
+        });
+    });
+    
+    // About image
+    gsap.fromTo('.about-image img', {
+        opacity: 0,
+        scale: 0.95
+        }, {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.about-image',
+            start: 'top 80%'
+        }
+    });
 }
 
 function initCounters() {
+    gsap.utils.toArray('.stat-item').forEach((item, i) => {
+        // Animate stat item appearance
+        gsap.to(item, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: i * 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.impact-section',
+                start: 'top 70%'
+            }
+        });
+    });
+    
     gsap.utils.toArray('.stat-number').forEach(counter => {
         const target = parseFloat(counter.getAttribute('data-target'));
         
@@ -135,12 +175,12 @@ function initCounters() {
             textContent: 0
         }, {
             textContent: target,
-            duration: 2,
+            duration: 2.5,
             ease: 'power2.out',
             snap: { textContent: 0.1 },
             scrollTrigger: {
-                trigger: counter,
-                start: 'top 80%'
+                trigger: '.impact-section',
+                start: 'top 70%'
             },
             onUpdate: function() {
                 const val = this.targets()[0].textContent;
@@ -150,37 +190,43 @@ function initCounters() {
     });
 }
 
-
-// Video Section Animation
-function initVideoSection() {
-    const video = document.getElementById('impactVideo');
-    const videoText = document.querySelector('.video-text');
+function initVideoAutoplay() {
+    const video = document.querySelector('.impact-video');
     
-    if (!video) return;
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                video.classList.add('playing');
-                video.play().catch(e => console.log('Video autoplay prevented:', e));
-                
-                setTimeout(() => {
-                    if (videoText) {
-                        videoText.classList.add('visible');
+    if (video) {
+        video.play().catch(() => {
+            console.log('Video autoplay prevented, will play on scroll');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play().catch(err => console.log('Video play error:', err));
+                        observer.unobserve(entry.target);
                     }
-                }, 500);
-                
-                observer.unobserve(entry.target);
-            }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(video);
         });
-    }, {
-        threshold: 0.5
-    });
-    
-    observer.observe(video);
+    }
 }
 
-// Initialize video section
-document.addEventListener('DOMContentLoaded', function() {
-    initVideoSection();
-});
+function initSocialAnimations() {
+    gsap.utils.toArray('.social-link').forEach((link, i) => {
+        gsap.fromTo(link, {
+            opacity: 0,
+            scale: 0,
+            rotation: -180
+        }, {
+            opacity: 1,
+            scale: 1,
+            rotation: 0,
+            duration: 0.8,
+            delay: i * 0.12,
+            ease: 'back.out(2)',
+            scrollTrigger: {
+                trigger: link,
+                start: 'top 85%'
+            }
+        });
+    });
+}
